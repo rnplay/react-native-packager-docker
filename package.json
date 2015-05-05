@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "rnplay",
+  "version": "1.0.1",
+  "description": "React Native Playground Node server for asset bundling",
+  "main": "",
+  "author": "Joshua Sierles",
+  "license": "MIT, see LICENSE file",
+  "bugs": {
+    "url": "https://github.com/jsierles/rnplay/issues"
+  },
+  "homepage": "https://github.com/jsierles/rnplay",
+  "dependencies": {
+    "react-native": "0.4.1"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  }
+}
