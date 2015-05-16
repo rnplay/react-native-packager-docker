@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get -y install software-properties-common git build-essential
 RUN add-apt-repository -y ppa:chris-lea/node.js
-RUN apt-get update 
+RUN apt-get update
 RUN apt-get install -y nodejs git-core automake
 
 RUN git clone https://github.com/facebook/watchman.git /tmp/watchman
@@ -13,7 +13,7 @@ RUN ./configure
 RUN make
 RUN make install
 
-ADD package.json /tmp/package.json
+ADD build-package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 

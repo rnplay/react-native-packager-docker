@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/jsierles/react-native-packager-docker",
   "dependencies": {
-    "react-native": "0.4.2",
+    "react-native": "0.4.4",
     "art": "^0.10.0"
   },
   "engines": {
