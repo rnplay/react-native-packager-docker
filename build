@@ -4,7 +4,7 @@
 while getopts ":v:" opt; do
   case $opt in
     v)
-      sed -e 's/\"react-native\": \".*\"/\"react-native\": \"0.4.4\"/g' package.json > build-package.json
+      sed -e "s/\"react-native\": \".*\"/\"react-native\": \"$OPTARG\"/g" package.json > build-package.json
       docker build -t packager:$OPTARG .
       rm build-package.json
       ;;
