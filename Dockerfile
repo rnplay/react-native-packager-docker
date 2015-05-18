@@ -17,11 +17,6 @@ ADD build-package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 
-ADD ./ /app
-WORKDIR /app
-
-RUN npm install
-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 8081
