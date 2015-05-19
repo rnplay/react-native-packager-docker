@@ -21,4 +21,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 8081
 
+WORKDIR /app
+
 CMD ["nodejs", "node_modules/react-native/packager/packager.js", "--root", "/js", "--port", "8081"]
