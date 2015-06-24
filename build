@@ -7,8 +7,9 @@ while getopts ":v:" opt; do
       if [ "$OPTARG" == "master" ]; then
         cp package.json build-package.json
       else
-        sed -e "s%\"react-native\": \".*\"%\"react-native\": \"${OPTARG}\"%g" package.json > build-package.json
+        sed -e "s%react-native#.*\"%react-native#${OPTARG}\"%g" package.json > build-package.json
       fi
+      cat build-package.json
       docker build -t packager:$OPTARG .
       rm build-package.json
       ;;
