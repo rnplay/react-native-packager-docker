@@ -28,8 +28,7 @@
     "react-native-activity-view": "0.2.1",
 
     "superagent": "1.2.0",
-    "react-tween-state": "0.0.5",
-    "react-native-device": "0.2.0"
+    "react-tween-state": "0.0.5"
   },
   "engines": {
     "node": ">= 0.12"
