@@ -1,10 +1,7 @@
-FROM ubuntu:14.04
+FROM node:0.12.5-onbuild
 
 RUN apt-get update
-RUN apt-get -y install software-properties-common git build-essential
-RUN add-apt-repository -y ppa:chris-lea/node.js
-RUN apt-get update
-RUN apt-get install -y nodejs git-core automake
+RUN apt-get -y install software-properties-common git-core build-essential automake
 
 RUN git clone https://github.com/facebook/watchman.git /tmp/watchman
 WORKDIR /tmp/watchman
@@ -23,4 +20,4 @@ EXPOSE 8081
 
 WORKDIR /app
 
-CMD ["nodejs", "node_modules/react-native/packager/packager.js", "--root", "/js", "--port", "8081"]
+CMD ["node", "node_modules/react-native/packager/packager.js", "--root", "/js", "--port", "8081"]
