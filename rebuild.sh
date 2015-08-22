@@ -1,3 +1,4 @@
+set -e
 sudo docker build -t packager .
 sudo docker stop packager
 sudo docker rm packager
