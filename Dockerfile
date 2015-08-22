@@ -21,4 +21,4 @@ EXPOSE 8081
 
 WORKDIR /app
 
-CMD ["node", "node_modules/react-native/packager/packager.js", "--root", "/js", "--port", "8081"]
+CMD ["node", "node_modules/react-native/packager/packager.js", "--port", "8081"]
