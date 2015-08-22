@@ -1,20 +1,25 @@
 ### React Native docker container for packaging apps
 
-Package your React Native apps with Docker on Ubuntu. Why not?
+Package your React Native apps with Docker on Debian. Why not?
 
 ### Usage
 
 Build:
 
 ```
-% docker build -t rn-packager .
+% sudo ./build -v 0.8.0-rc.2
 ```
 
 Run with a Docker volume where your app javascript lives:
 
 ```
-% docker run -v /path/to/js:/js rn-packager
+% sudo docker run -p 8081:8081 -v /path/to/js:/js packager:0.8.0-rc.2
 ```
+
+The packager is now listening on port 8081.
+
+To access the bundle of your application:
+http://localhost:8081/index.ios.bundle
 
 ### Use in development
 
