@@ -13,7 +13,7 @@ Build:
 Run with a Docker volume where your app javascript lives:
 
 ```
-% sudo docker run -p 8081:8081 -v /path/to/js:/js packager:0.8.0-rc.2
+% sudo docker run -p 8081:8081 -v /path/to/js:/app/js packager:0.8.0-rc.2
 ```
 
 The packager is now listening on port 8081.
