@@ -17,6 +17,8 @@ RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 RUN rm -rf /tmp/* /var/tmp/*
 RUN mkdir -p /usr/local/var/run/watchman/
 
+ADD babelrc /app/.babelrc
+
 EXPOSE 8081
 
 WORKDIR /app
